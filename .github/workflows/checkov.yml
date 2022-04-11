@@ -12,11 +12,9 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory: /
-          #check: CKV_AWS_1 # optional: run only a specific check_id. can be comma separated list
-          #skip_check: CKV_AWS_2 # optional: skip a specific check_id. can be comma separated list
-          quiet: false # optional: display only failed checks
-          soft_fail: false # optional: do not return an error code if there are failed checks
-          framework: terraform # optional: run only on a specific infrastructure {cloudformation,terraform,kubernetes,all}
-          output_format: sarif # optional: the output format, one of: cli, json, junitxml, github_failed_only, or sarif. Default: sarif
-          download_external_modules: true # optional: download external terraform modules from public git repositories and terraform registry
-          log_level: DEBUG # optional: set log level. Default WARNING
+          quiet: false 
+          soft_fail: false
+          framework: terraform
+          output_format: sarif
+          download_external_modules: true 
+          log_level: DEBUG
